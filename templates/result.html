@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>COVID19</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'PT Sans', sans-serif;
+
+    }
+
+    :root {
+      --pColor: #00BFA6;
+      --sColor: #00BFA6;
+      --utilColor: #F00;
+      /*---To be Changed */
+      font-size: 62.5%;
+    }
+
+    body::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    body::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      border-left: 0;
+      border-right: 0;
+      background-color: #00BFA6;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--pColor);
+      padding: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 2.6rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    .wrapper p {
+      font-size: 3rem;
+      margin: 1rem 0 0 0;
+      font-weight: 600;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 70vh;
+    }
+
+    .wrapper h3 {
+      color: var(--pColor);
+      margin-top: 7rem;
+      font-size: 2.4rem;
+    }
+
+    .wrapper img {
+      width: 32rem;
+      border-radius: .67rem;
+      margin: 12rem 0 0 0;
+    
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    #resultUl {
+      font-size: 1.9rem;
+      list-style: none;
+      /* margin: 1.5rem 0 0 0; */
+      margin: 1.5rem 0 0 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#">Covid Predictor</a>
+  </nav>
+  <div class="wrapper">
+    <div class="container">
+      <h3>
+        Uploaded Image:
+      </h3>
+      <img src=" {{url_for('send_image', filename=image_name)}}" />
+      <!-- <img src="../images/1-s2.0-S0929664620300449-gr2_lrg-c.jpg" alt=""> -->
+    </div>
+    <p id="result">
+      {{text}}
+
+    <ul id="resultUl">
+      <!-- <li>Hello</li> -->
+    </ul>
+    </p>
+  </div>
+  <div class="footer">
+    <!-- Made with ❤️ by Team Mokey for INGENIUM -->
+  </div>
+
+</body>
+
+<script>
+  const res = document.getElementById('result');
+  const ul = document.getElementById('resultUl');
+  console.log(ul)
+  if (res.innerText == "Patient is Corona Positive") {
+    ul.innerHTML = "<li>First of all, Isolate yourself</li> <li>Consult to the doctor as soon as possible.</li>"
+    res.classList.add('red')
+  }
+  else {
+    ul.innerHTML = "<li>STAY home as much as you can</li><li>KEEP a safe distance</li><li>WASH hands often</li><li>COVER your mouth</li>"
+    res.classList.add('green')
+  }
+
+</script>
+
+</html>

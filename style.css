@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+
+}
+:root{
+    --pColor: #00BFA6;
+    --sColor: #00BFA6;
+    --utilColor: #F00; /*---To be Changed */
+    font-size: 62.5%;
+}
+
+body::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    border-left: 0;
+    border-right: 0;
+    background-color: #00BFA6;
+  }
+  
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pColor);
+    padding: 2rem;
+}
+nav a{
+    text-decoration: none;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: 600;
+}
+/*              ---Instructions ------- */
+.instruction{
+    font-size: 1.8rem;
+    margin: 1.6rem 0 0 0;
+    color: var(--utilColor);
+    padding: .5rem 0 .5rem 2rem;
+}   
+
+/*                 ----- Form -----                */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    padding: 2rem;
+    margin: 1rem 0 0 0 ;
+  }
+form .materialInfo{
+    border: none;
+    border-bottom: 2px solid gray;
+    padding: 1rem;
+    width: 100%;
+    font-size: 2rem;
+    margin: .5rem 0 0 0;
+  }
+form .materialInfo:focus{
+    outline-width: 0;
+  }
+  
+    form .uploadContainer{
+    border-radius: 2.5rem;
+    box-shadow: 0 6px 10px #0000002e;
+    margin: 2rem 0 0 0 ;
+  }
+  
+  
+    form .uploadContainer .dropzone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50rem;
+    min-height: 20rem;
+    border: 2px dashed var(--pColor);
+    margin: 3rem;
+    border-radius: 1rem;
+    transition: all .2s ease-in-out;
+  }
+    form .uploadContainer .dragged.dropzone{
+    background-color: #eff5fe;
+  }
+  
+  #inputFile{
+    display: none;
+  }
+  .d-none{
+    display: none;
+  }
+    form .uploadContainer .dropzone .icon-container{
+    width: 7.5rem;
+    position: relative;
+    height: 8rem;
+  }
+    form .uploadContainer .dropzone .icon-container .center{
+    z-index: 2;
+  }
+    form .uploadContainer .dropzone.dragged .icon-container .center{
+    transform: translateY(-0.2rem);
+  }
+    form .uploadContainer .dropzone.dragged .icon-container .right{
+    transform: rotate(15deg) translate(2rem) scale(.9);
+    filter: grayscale(.5);
+  }
+    form .uploadContainer .dropzone.dragged .icon-container .left{
+    transform: rotate(-15deg) translate(-2rem) scale(.9);
+    filter: grayscale(.5);
+  }
+    form .uploadContainer .dropzone .icon-container img{
+    width: 7rem;
+    position: absolute;
+    transition: transform 250ms ease-in-out;
+  }
+    form .uploadContainer .dropzone .dropFiles{
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0;
+    color: #000;
+  }
+    form .uploadContainer .dropzone .dropFiles .browseBtn{
+    color: #00BFA6;
+    cursor: pointer;
+  }
+    form .uploadContainer .dropzone .fileDropped p{
+    font-size: 1.7rem;
+    color: #00BFA6;
+  }
+  .btnSubmit{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* padding-right: 2rem; */
+    margin: 2rem 0 0 0;
+  }
+  .btnSubmit input{
+    padding: .8rem 1.8rem;
+    /* margin-bottom: 2rem; */
+    border-radius: .9rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: var(--pColor);
+    color: white;
+  }
+  .btnSubmit input:hover{
+    background-color: var(--sColor);
+  }
+
+  /*  ------HEader-------- */
+  header{
+      font-size: 2.7rem;
+      color: var(--pColor);
+      margin: 2rem 0 0 2rem;
+
+  }
+   ul{
+      /* list-style: none; */
+      font-size: 1.8rem;
+      margin: 1rem 0 0 4rem;
+  }
+   ul li {
+    margin: .5rem 0 0 0;
+  }
+  
+.crossBtn::after{
+    content: 'X';
+    font-weight: bold;
+    display: inline-block;
+    transform: scale(1.2);
+    margin: 0 0 0 .5rem;
+    font-size: 1.2rem;
+  }
