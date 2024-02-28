@@ -1,4 +1,3 @@
-# Covid-Analysis
 # Covid Prediction
 
 ## COVID-19 detection from X-ray scans of the chest using CNN
@@ -80,4 +79,4 @@ python app.py
   ## Team Name: Mokey
 
 - [Om Delvadia](mailto:om.delvadia02@gmail.com)
-- [Mohit Patel](mailto:nishit.s.027@gmail.com)
+- [Nishit Kareliya](mailto:nishit.s.027@gmail.com)
