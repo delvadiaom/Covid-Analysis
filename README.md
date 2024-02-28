@@ -73,7 +73,7 @@ python app.py
   <!-- demo video/images of projects -->
 ![](demo/Screenshot%202022-03-27%20160237.png)
 ![](demo/Screenshot%202022-03-27%20160311.png)
-![](demo/Screenshot%202022-03-27%20160413.png)
+![](demo/Screenshot%202022-03-27%20160335.png)
 
   ## Team Name: Mokey
 
